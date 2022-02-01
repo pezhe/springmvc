@@ -20,8 +20,8 @@ public class ProductRepository {
                 .findAny();
     }
 
-    public Product add(String title, double cost) {
-        Product product = new Product(++idCounter, title, cost);
+    public Product add(Product product) {
+        product.setId(++idCounter);
         productList.add(product);
         return product;
     }

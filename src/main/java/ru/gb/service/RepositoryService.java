@@ -18,8 +18,8 @@ public class RepositoryService {
         return repo.get(id).orElseThrow(NoSuchElementException::new);
     }
 
-    public Product add(String title, double cost) {
-        return repo.add(title, cost);
+    public Product add(Product product) {
+        return repo.add(product);
     }
 
     public List<Product> getProductList() {
